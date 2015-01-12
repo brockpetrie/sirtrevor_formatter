@@ -1,0 +1,5 @@
+{
+    "require": {
+        "woutersioen/sir-trevor-php": "dev-master"
+    }
+}

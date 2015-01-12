@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<extension id="sirtrevor_formatter" status="released" xmlns="http://getsymphony.com/schemas/extension/1.0">
+	<name>Sir Trevor Formatter</name>
+	<description>Text formatter to convert Sir Trevor JSON to HTML.</description>
+	<repo type="github">https://github.com/brockpetrie/sirtrevor_formatter</repo>
+	<url type="discuss" />
+	<types>
+		<type>Text Formatters</type>
+	</types>
+	<authors>
+		<author>
+			<name github="brockpetrie" symphony="brockpetrie">Brock Petrie</name>
+			<website>http://brockpetrie.com</website>
+		</author>
+	</authors>
+	<releases>
+		<release version="1.0" date="2015-1-11" min="2.4" max="2.6">
+			- Initial release
+		</release>
+	</releases>
+</extension>
