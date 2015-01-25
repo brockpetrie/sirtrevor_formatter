@@ -36,7 +36,7 @@ class IframeConverter extends BaseConverter implements ConverterInterface
 
         if ($source == 'youtube') {
             $html = '<iframe src="//www.youtube.com/embed/' . $remoteId . '?rel=0" ';
-            $html .= 'frameborder="0" allowfullscreen></iframe>' . "\n";
+            $html .= 'frameborder="0" allowfullscreen="true"></iframe>' . "\n";
 
             return $html;
         }

@@ -51,7 +51,7 @@ class ConverterTest extends \PHPUnit_Framework_TestCase
         $html = $converter->toHtml($json);
         $this->assertEquals(
             $html,
-            "<iframe src=\"//www.youtube.com/embed/4BXpi7056RM?rel=0\" frameborder=\"0\" allowfullscreen></iframe>\n"
+            "<iframe src=\"//www.youtube.com/embed/4BXpi7056RM?rel=0\" frameborder=\"0\" allowfullscreen=\"true\"></iframe>\n"
         );
 
         // The heading

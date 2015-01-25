@@ -38,7 +38,8 @@ class BlockquoteConverter extends BaseConverter implements ConverterInterface
     {
         $text = $data['text'];
         $html = '<blockquote>';
-        $html .= Markdown::defaultTransform($text);
+        //$html .= Markdown::defaultTransform($text);
+        $html .= Markdown::defaultTransform(str_replace('> ', '', $text));
 
         // Add the cite if necessary
         if (isset($data['cite']) && !empty($data['cite'])) {

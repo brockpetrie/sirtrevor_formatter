@@ -18,6 +18,6 @@ class ImageConverter extends BaseConverter implements ConverterInterface
 
     public function toHtml(array $data)
     {
-        return '<img src="' . $data['file']['url'] . '" />' . "\n";
+        return '<figure><img src="' . $data['file']['url'] . '" /></figure>' . "\n";
     }
 }

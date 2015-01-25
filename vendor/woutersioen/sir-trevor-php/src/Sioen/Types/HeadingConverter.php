@@ -11,7 +11,7 @@ class HeadingConverter extends BaseConverter implements ConverterInterface
         $html = $node->ownerDocument->saveXML($node);
 
         // remove the h2 tags from the text. We just need the inner text.
-        $html = preg_replace('/<(\/|)h2>/i', '', $html);
+        $html = preg_replace('/<(\/|)h3>/i', '', $html);
 
         return array(
             'type' => 'heading',
@@ -23,6 +23,6 @@ class HeadingConverter extends BaseConverter implements ConverterInterface
 
     public function toHtml(array $data)
     {
-        return Markdown::defaultTransform('## ' . $data['text']);
+        return Markdown::defaultTransform('### ' . $data['text']);
     }
 }
