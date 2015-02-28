@@ -25,6 +25,14 @@ class IframeConverter extends BaseConverter implements ConverterInterface
                     'remote_id' => $matches[1]
                 )
             );
+        } elseif (preg_match('~//prezi.com/embed/([^/\?]+).*\?~si', $html, $matches)) {
+            return array(
+                'type' => 'video',
+                'data' => array(
+                    'source' => 'prezi',
+                    'remote_id' => $matches[1]
+                )
+            );
         }
     }
 
@@ -45,6 +53,14 @@ class IframeConverter extends BaseConverter implements ConverterInterface
         if ($source == 'vimeo') {
             $html = '<iframe src="//player.vimeo.com/video/' . $remoteId;
             $html .= '?title=0&amp;byline=0" frameborder="0"></iframe>' . "\n";
+
+            return $html;
+        }
+
+        // vimeo videos
+        if ($source == 'prezi') {
+            $html = '<iframe src="//prezi.com/embed/' . $remoteId;
+            $html .= '?bgcolor=ffffff&amp;lock_to_path=0&amp;autoplay=0&amp;autohide_ctrls=0" frameborder="0"></iframe>' . "\n";
 
             return $html;
         }
