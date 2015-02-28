@@ -21,6 +21,7 @@ class Converter
      */
     public function toHtml($json)
     {
+        if ($json == '') return false;
         // convert the json to an associative array
         $input = json_decode($json, true);
         $html = '';
