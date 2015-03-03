@@ -26,6 +26,8 @@ class Converter
         $input = json_decode($json, true);
         $html = '';
 
+        if (is_null($input)) return 'empty';
+
         // loop trough the data blocks
         foreach ($input['data'] as $block) {
             $toHtmlContext = new ToHtmlContext($block['type']);
